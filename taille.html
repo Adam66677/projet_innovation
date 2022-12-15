@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<center>
+		<h1 style="color: green">GeeksForGeeks</h1>
+		<button type="button"
+			onclick="changeSizeByBtn(15)" name="btn1">
+			-A
+		</button>
+		
+		<button type="button"
+			onclick="changeSizeByBtn(20)" name="btn2">
+			A
+		</button>
+
+		<button type="button" onclick="changeSizeByBtn(25)"
+			name="btn3">
+			A+
+		</button>
+		<br /><br />
+
+		<div style="padding: 20px; margin: 50px;
+			font-size: 20px; border: 5px solid green;"
+			id="container" class="container">
+			
+			<p>
+				A Computer Science portal for geeks.
+				It contains well written, well thought
+
+			</p>
+		</div>
+
+		<input type="range" min="10" max="30" id="slider"
+			onchange="changeSizeBySlider()" value="20" />
+	</center>
+
+	<script>
+		var cont = document.getElementById("container");
+
+		function changeSizeByBtn(size) {
+
+			// Set value of the parameter as fontSize
+			cont.style.fontSize = size;
+		}
+
+		function changeSizeBySlider() {
+			var slider = document.getElementById("slider");
+
+			// Set slider value as fontSize
+			cont.style.fontSize = slider.value;
+		}
+	</script>
+</body>
+
+</html>
