@@ -1,0 +1,40 @@
+/* ---------------- */
+/* défilement vertical */
+.marque-ver {
+  position:relative;
+  max-width: 30em;
+  height:6em;
+  margin: 2em auto;
+  border: 1px solid #F0F0FF;
+  overflow: hidden;
+  box-shadow: 0 .25em .5em #CCC,inset 0 0 1em .25em #CCC;
+  
+  
+}
+.marque-ver > div {
+  position:relative;
+  padding: 2em;
+  padding-top: 6em; /* meme que height du parent */
+  animation: defilement-ver 10s infinite linear;
+  cursor: pointer;
+  
+}
+
+.msg {
+  font-size: 1em;
+  line-height: 1em;
+}
+.msg:first-letter {
+  font-weight: 700;
+  color: #F00;
+}
+@keyframes defilement-ver {
+  0% {
+    transform: translate3d(0,,0);
+  }
+  100% {
+    transform: translate3d(0,-100%,0);
+  }
+}
+/* ---------------- */
+	  
